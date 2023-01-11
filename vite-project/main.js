@@ -1,25 +1,18 @@
-const URL = "https://uselessfacts.jsph.pl/random";
-console.log(fetch(URL));
+const url = "https://api.chucknorris.io/jokes/random";
 
-fetch(URL)
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-
-async function fetchdata(URL) {
+async function fetchData(url) {
   try {
-    const response = await fetch(URL);
+    const response = await fetch(url);
     const data = await response.json();
     console.log(data);
     return data;
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
-fetchdata(URL);
-
 const apiResponseDOM = document.getElementById("api-response");
-const putQuoteInHTML = async () => {
-  const fact = await fetchdata(URL);
-  apiResponseDOM.innerHTML = `Fact: ${fact}`;
+const putJokeInHTML = async () => {
+  const joke = await fetchData(url);
+  apiResponseDOM.innerHTML = `Joke: ${joke.value}, cat`;
 };
-putQuoteInHTML();
+putJokeInHTML();
