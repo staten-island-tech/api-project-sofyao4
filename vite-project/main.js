@@ -13,6 +13,6 @@ async function fetchData(url) {
 const apiResponseDOM = document.getElementById("api-response");
 const putJokeInHTML = async () => {
   const joke = await fetchData(url);
-  apiResponseDOM.innerHTML = `Joke: ${joke.value} Category: ${joke.categories}`;
+  apiResponseDOM.innerHTML = `Joke: ${joke.value} <img src="${joke.icon_url}">`;
 };
 putJokeInHTML();
