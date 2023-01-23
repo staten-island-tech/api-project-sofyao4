@@ -1,4 +1,5 @@
-const url = "https://api.disneyapi.dev/characters/308";
+import "../styles/main.css";
+const url = "https://api.disneyapi.dev/character?";
 async function fetchData(url) {
   try {
     const response = await fetch(url);
@@ -10,9 +11,10 @@ async function fetchData(url) {
   }
 }
 
-const apiResponseDOM = document.getElementById("api-response");
+DOM.submitName.addEventListener("submit", function () {});
+
 const getChar = async () => {
   const char = await fetchData(url);
-  apiResponseDOM.innerHTML = `Name: ${char.name} <img src=${char.imageUrl}>`;
+  DOM.apiResponseDOM.innerHTML = `Name: ${char.name} <img src=${char.imageUrl}>`;
 };
 getChar();
