@@ -8,8 +8,14 @@
   </head>
   <body>
     <div id="app"></div>
-    <input type="nameInput">
-    <button id="submit-btn">Submit</button>
+
+    <form id="form" action="submit">
+      <div class="input">
+        <label for="name" class="label-input">Enter a name of any Disney Character</label>
+        <input type="text" id="input" required>
+      </div>
+      <div><input type="submit" value="Submit" id="button"></div>
+    </form>
     <div id="api-response"></div>
     <script type="module" src="./js/main.js"></script>
   </body>
