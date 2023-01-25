@@ -5,18 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div id="app"></div>
+    
+    <form id="form" action="submit" class="input-form">
+      <label for="name" class="label-input">Enter a name of any Disney Character</label>
+      <label for="text"><input type="text" id="input" required></label>
+      <label for="button">      
+        <button class="submit-button"><img src="./styles/magnifying-glass-icon-forjs.png" alt="Search"></button></label>
 
-    <form id="form" action="submit">
-      <div class="input">
-        <label for="name" class="label-input">Enter a name of any Disney Character</label>
-        <input type="text" id="input" required>
-      </div>
-      <div><input type="submit" value="Submit" id="button"></div>
     </form>
     <div id="api-response"></div>
+    </div>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
