@@ -1,8 +1,8 @@
 const DOM = {
   submitName: document.querySelector("#submit-btn"),
-  apiResponseDOM: document.getElementById("api-response"),
+  apiResponseDOM: document.getElementById("content-card"),
   form: document.getElementById("form"),
   input: document.getElementById("input"),
-  button: document.getElementById("button"),
+  button: document.getElementsByTagName("button"),
 };
 export { DOM };

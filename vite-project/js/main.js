@@ -5,11 +5,8 @@ const myFunctions = {
   cardMaker: function (element) {
     DOM.apiResponseDOM.insertAdjacentHTML(
       "beforeend",
-      `<div class="element-card">
-  <h2 id="card-name">${element.name}</h2>
-  <img id="card-img" src=${element.imageUrl}>
-  
-  </div>`
+      ` <li class="element-card">  <h2 id="card-name">${element.name}</h2>
+      <img id="card-img" src=${element.imageUrl}></li>`
     );
   },
   fetchData: async function () {

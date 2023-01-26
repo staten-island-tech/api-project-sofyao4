@@ -11,17 +11,27 @@
 
   </head>
   <body>
-    <div id="app"></div>
-    
-    <form id="form" action="submit" class="input-form">
-      <label for="name" class="label-input">Enter a name of any Disney Character</label>
-      <label for="text"><input type="text" id="input" required></label>
-      <label for="button">      
-        <button class="submit-button"><img src="./styles/magnifying-glass-icon-forjs.png" alt="Search"></button></label>
+    <div class="header">
+      <h1 class="intro-header">Disney Characters API</h1>
+    </div> 
+        <form id="form" action="submit" class="input-form">
+          <label for="name" class="label-input">Enter a name of any Disney Character
+          </label>
+          <label>
+            <input title="Input" type="text" id="input" required>
+          </label>
+          <button type="submit" class="submit-button" id="button">
+            <img src="./styles/magnifying-glass-icon-forjs.png" alt="Search">
+          </button>
+        </form>
+        
 
-    </form>
-    <div id="api-response"></div>
+
+    <div id="app">
+        <ul id="content-card"></ul>
     </div>
+    
+
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
