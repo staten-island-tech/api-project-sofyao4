@@ -12,8 +12,19 @@
 
 /* Theme */
 .dark-theme{
+    --primary:#33455e;
+    --secondary: #1d78fd;
+    --font-color:#f2f3f7;
+    --accent1:#f03a52;
+    --accent2:#b13fd2;
+    --accent3:#7bcded;
 
 }
 .light-theme{
-    
+    --primary: #fcfbf0;
+    --secondary: #e773aa;
+    --font-color: #1a2345;
+    --accent1: #e7356a;
+    --accent2:#f4ae2c;
+    --accent3: #fcd7df;   
 }

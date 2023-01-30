@@ -10,8 +10,9 @@ html,body,*{
     color: var(--font-color);
     font-family: 'Karla', sans-serif;
     border: 0;
+
   }
-  .header{
+  .intro{
     height: 97vh;
     font-size: var(--h1);
     background-image: url('https://images.unsplash.com/photo-1635113971261-db48e3b835b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
@@ -19,7 +20,8 @@ html,body,*{
     background-position: center;
     background-repeat: no-repeat;
   }
-  .intro-header{
+  .title{
+    font-size: var(--h1);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,36 +29,67 @@ html,body,*{
     padding:  3rem 25rem 3rem 25rem;
     background-color: rgb(250, 235, 215, 0.6) ;
   }
-  #form{
-    margin-top:3rem ;
-  }
-  .label-input{
+  #header{
+    font-size: var(--h2);
     margin-top: 3rem;
   }
-  .input-form{
+  .main-form{
+    padding: 2px;
+    text-align: center;    
+    margin:3rem 20rem 3rem 20rem;
     font-size: var(--h2);
     display: flex;
-    flex-direction: row;
+    border: 1px solid currentColor;
+    border-radius: 100px
   }
-  #input{
+
+  #input-space[type="search"]{
+    text-align: left;
     width: 100%;
-    padding: 10px 35px 10px 15px;
-    border: none;
-    border-radius: 100px;
+    padding: 7px 8px;
+    font-size: 14px;
+    background: transparent;
+    margin: 0;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+  }
+  #input-space::placeholder{
+    color: #bbb;
+  }
+  .submit-button{
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: inherit;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .submit-button:hover {
+    opacity: 1;
+  }
+  .submit-button:focus,
+  #input-space:focus {
+    box-shadow: 0 0 3px 0 #1183d6;
+    border-color: #1183d6;
     outline: none;
-    background-color: aquamarine;
+  }
+
+  .content-list{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
   }
   .element-card{
     font-size: var(--h2);
-    padding: 20rem;
+    margin: 2rem;
+    padding: 10rem;
+    float: left;
+    width: auto;
+    list-style: outside none none;
   }
-  .submit-button{
-    background: transparent;
-    border: none;
-    outline: none;
-    margin-left: -33px;
-  }
-  .submit-button img{
-    width: 2.5%;
-    object-fit: cover;
+  #themeBtn{
+    font-size: var(--p);
+    background-color: var(--accent1);
   }

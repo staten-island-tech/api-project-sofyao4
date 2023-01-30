@@ -1,11 +1,12 @@
 import "../styles/main.css";
 import { DOM } from "./dom.js";
+import { theming } from "./theme.js";
 
 const myFunctions = {
   cardMaker: function (element) {
     DOM.apiResponseDOM.insertAdjacentHTML(
       "beforeend",
-      ` <li class="element-card">  <h2 id="card-name">${element.name}</h2>
+      ` <li class="element-card"><h2 id="chracter-name">${element.name}</h2>
       <img id="card-img" src=${element.imageUrl}></li>`
     );
   },

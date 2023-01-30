@@ -8,28 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
-    <div class="header">
-      <h1 class="intro-header">Disney Characters API</h1>
-    </div> 
-        <form id="form" action="submit" class="input-form">
-          <label for="name" class="label-input">Enter a name of any Disney Character
-          </label>
-          <label>
-            <input title="Input" type="text" id="input" required>
-          </label>
-          <button type="submit" class="submit-button" id="button">
-            <img src="./styles/magnifying-glass-icon-forjs.png" alt="Search">
-          </button>
-        </form>
-        
-
-
-    <div id="app">
-        <ul id="content-card"></ul>
+  <body class="light-theme">
+    <div class="intro">
+      <h1 class="title">Disney Characters API</h1>
     </div>
+    <div class="content">
+      <h2 id="header">Enter the name of any Disney Character</h2> 
+      <form id="form" action="submit" class="main-form">
+          <input title="Input" type="search" id="input-space" placeholder="Search: ex. Rapunzel" required>
+        <button title="submit" type="submit" class="submit-button" id="button">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <div class="other">      <button type="button" id="themeBtn">Change theme</button></div>
+      <div class="app">
+        <ul id="content-list"></ul>
+    </div>
+    </div>
+
+
     
 
     <script type="module" src="./js/main.js"></script>
