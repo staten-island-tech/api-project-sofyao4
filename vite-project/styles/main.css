@@ -16,6 +16,7 @@ html,body,*{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
   }
   .title{
     font-size: var(--h1);
@@ -167,5 +168,28 @@ html,body,*{
       margin: 2rem;
       width: 43%;
       padding: 2rem 6rem 2rem 6rem ;
+    }
+  }
+  @media screen and (max-width: 480px){
+    .title{
+      font-size: var(--h2);
+    }
+    #header{
+      font-size: var(--h3);
+    }
+    .main-form{
+      margin: 3rem 8rem 3rem 8rem;
+    }
+    .other{
+      text-align: center;
+    }
+    #themeBtn{
+      margin-left: 0;
+    }
+    .element-card{
+      width: 74%;
+    }
+    .card-img{
+      max-width: 20rem;
     }
   }
