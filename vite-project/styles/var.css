@@ -4,7 +4,7 @@
     --h2: 5.063rem;
     --h3: 3.8rem;
     --p: 3.375rem;
-
+    --search: 1.5rem;
     /* Intentions */
 
 
@@ -12,7 +12,8 @@
 
 /* Theme */
 .dark-theme{
-    --primary:#33455e;
+    --primary:rgb(51, 69, 94);
+    --pr-reduc-opac: rgb(51, 69, 94, 0.6); /*reduced opacity for primary color*/
     --secondary: #1d78fd;
     --font-color:#f2f3f7;
     --accent1:#f03a52;
@@ -21,7 +22,8 @@
 
 }
 .light-theme{
-    --primary: #fcfbf0;
+    --primary: rgb(252, 250, 238);
+    --pr-reduc-opac: rgb(252, 250, 238, 0.6);
     --secondary: #e773aa;
     --font-color: #1a2345;
     --accent1: #e7356a;

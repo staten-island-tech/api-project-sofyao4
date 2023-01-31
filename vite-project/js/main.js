@@ -1,13 +1,31 @@
 import "../styles/main.css";
 import { DOM } from "./dom.js";
 import { theming } from "./theme.js";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const myFunctions = {
   cardMaker: function (element) {
     DOM.apiResponseDOM.insertAdjacentHTML(
       "beforeend",
-      ` <li class="element-card"><h2 id="chracter-name">${element.name}</h2>
-      <img id="card-img" src=${element.imageUrl}></li>`
+      `<div data-aos="fade-right"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true"
+      class="element-card">
+      <h2 class="character-name">${element.name}</h2>
+      <img class="card-img" src=${element.imageUrl} alt= "${element.name}">
+      <div class= "charInfo">
+      <p><span class= "infoSpan">Short Films:</span> ${element.shortFilms.join(
+        ", "
+      )}</p>
+      <p><span class= "infoSpan">TV Shows:</span> ${element.tvShows.join(
+        ", "
+      )}</p>
+      <p><span class= "infoSpan">Films:</span> ${element.films.join(", ")}</p>
+      </div>
+</div>`
     );
   },
   fetchData: async function () {
@@ -23,8 +41,16 @@ const myFunctions = {
       } else {
         const data = await response.json();
         console.log(data);
-        data.data.forEach((element) => myFunctions.cardMaker(element));
-        DOM.input.value = "";
+        if (data.count === 0) {
+          DOM.apiResponseDOM.insertAdjacentHTML(
+            "beforeend",
+            `
+            <div class="noChar"> <h2>Sorry no character was found, check spelling, or enter a different name </h2></div>`
+          );
+        } else {
+          data.data.forEach((element) => myFunctions.cardMaker(element));
+          DOM.input.value = "";
+        }
       }
     } catch (err) {
       console.error(err);
@@ -35,4 +61,8 @@ const myFunctions = {
 DOM.form.addEventListener("submit", function (e) {
   e.preventDefault();
   myFunctions.fetchData();
+});
+DOM.theme.addEventListener("click", function (e) {
+  e.preventDefault;
+  theming();
 });
