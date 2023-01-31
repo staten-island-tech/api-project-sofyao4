@@ -34,7 +34,7 @@ html,body,*{
   .main-form{
     padding: 2px;
     text-align: center;    
-    margin:3rem 20rem 3rem 20rem;
+    margin: 3rem 15%;
     font-size: var(--h2);
     display: flex;
     border: 1px solid var(--accent2);
@@ -81,25 +81,23 @@ html,body,*{
     background-color: var(--accent1);
     color: var(--accent3);
     padding: 1rem;
-    margin-left: 20rem;
+    margin-left: 20%;
     border-top: 2px solid transparent;
     border: 2px solid transparent;
     cursor: pointer;
     border-radius: 3rem;
   }
   #app{
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-
   }
   .element-card{
     margin-top: 2rem;
     font-size: var(--h2);
     margin: 4rem;
-    padding: 3rem 9rem 3rem 9rem ;
+    padding: 3rem 9rem;
     background-color: var(--secondary);
     width: 24%;
     border-radius: 2rem;
@@ -149,25 +147,28 @@ html,body,*{
     .element-card{
       margin: 2rem;
       width: 25%;
-      padding: 2rem 3rem 2rem 3rem ;
+      padding: 2rem 3rem;
     }
     .card-img{
-      max-width: 15rem;
-      max-height: 30rem;
+      width: 15rem;
+      height: 30rem;
     }
   }
   @media screen and (max-width:992px){
     .element-card{
       margin: 5rem;
-      width: 34%;
-      padding: 2rem 6rem 2rem 6rem ;
+      width: 37%;
+      padding: 2rem 4rem;
     }
   }
   @media screen and (max-width:768px){
     .element-card{
       margin: 2rem;
-      width: 43%;
-      padding: 2rem 6rem 2rem 6rem ;
+      width: 60%;
+      padding: 2rem 3rem 2rem 3rem ;
+    }
+    .card-img{
+      width: 45%;
     }
   }
   @media screen and (max-width: 480px){
